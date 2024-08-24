@@ -1,0 +1,10 @@
+import string
+def count_special_characters(statement):
+    special_characters = 0
+    for char in statement:
+        if char in string.punctuation or not char.isalnum():
+            special_characters += 1
+    return special_characters
+given_statement = "Modi Birthday @ September 17, #&$% is the wishes code for him."
+result = count_special_characters(given_statement)
+print(f"Number of special Characters: {result}")
